@@ -1,0 +1,11 @@
+package rip.kirooh.example.impl;
+
+import rip.kirooh.adapter.CommandTypeAdapter;
+
+public class StringTypeAdapter implements CommandTypeAdapter
+{
+    @Override
+    public <T> T convert(final String string, final Class<T> type) {
+        return type.cast(string);
+    }
+}
